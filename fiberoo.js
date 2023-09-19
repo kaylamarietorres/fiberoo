@@ -9,8 +9,17 @@ function fib() {
 }
 console.log(fib());
 
-const _ = require('underscore');
 function numsToStrings(numbers) {
   return _.map(numbers, (number) => `${number}`);
 }
 console.log(numsToStrings(fib()));
+function numEvenNums(numbers) {
+  let evenCount = 0;
+  for (const number of numbers) {
+    if (number % 2 === 0) {
+      evenCount += 1;
+    }
+  }
+  return evenCount;
+}
+console.log(numEvenNums(fib()));
